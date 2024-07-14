@@ -1,4 +1,4 @@
-describe('prueba transtornos', () => {
+describe('prueba calendario', () => {
     beforeEach(() => {
         cy.visit('http://localhost:8100');
         cy.get('#username').type('ashu');

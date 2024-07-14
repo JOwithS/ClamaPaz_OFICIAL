@@ -20,4 +20,5 @@ describe('analisis', () => {
 });
 
 
-//funciona el registro y del registro al home funciona la redirección al presionar el botón ingrese, el cual me lleva a la página análisis
+//funciona el registro y del registro al home funciona la redirección al presionar el botón ingrese, 
+//el cual me lleva a la página análisis

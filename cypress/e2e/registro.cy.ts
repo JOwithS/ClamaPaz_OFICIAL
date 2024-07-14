@@ -1,7 +1,6 @@
 describe('Prueba de registro de usuario', () => {
     it('Debería permitir registrar un usuario nuevo', () => {
-        cy.visit('http://localhost:8100'); // Visita la página principal donde está el formulario de registro
-
+        cy.visit('http://localhost:8100'); 
         // formulario de registro
         cy.get('#username').type('ashu');
         cy.get('#password').type('Am0$');

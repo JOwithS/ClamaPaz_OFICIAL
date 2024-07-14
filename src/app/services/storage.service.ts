@@ -38,7 +38,7 @@ export class StorageService {
       await this.presentToast('La contraseña debe tener un máximo de 8 dígitos, debe tener al menos alguna mayúscula/minúscula/números/@$&');
       return false;
     }
-    await this._storage?.set('auth_token', token); // Guardar el token de autenticación
+    await this._storage?.set('auth_token', token); 
     this.authToken = token;
     return true;
   }

@@ -8,5 +8,5 @@ describe('template spec', () => {
   /*funciona el auth.guard y el approuting modules, pq no he iniciado sesión y me negó la entrada
    con la alerta:
    acceso denegado
-
+  ***Al no darme el acceso sé que funcionó  auth.guard***
   */

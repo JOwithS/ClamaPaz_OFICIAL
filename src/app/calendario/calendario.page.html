@@ -4,21 +4,35 @@
   </ion-toolbar>
 </ion-header>
 
-<form [formGroup]="dateForm">
+<ion-content class="calendario">
+<form [formGroup]="dateForm" class="calendario">
   <mat-form-field>
     <mat-label>Elige una fecha</mat-label>
     <input matInput [matDatepicker]="picker" formControlName="selectedDate">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-  <br>
-
+  <br><br><br><br>
 </form>
+</ion-content>
+
 <ion-button expand="block" (click)="saveDate()" color="primary">Guardar Fecha</ion-button>
-<ion-button expand="block" (click)="loadLastSavedDate()" color="secondary">Mostrar Fecha Guardada</ion-button>
+<ion-button expand="block" (click)="showSavedDateCard()" color="secondary">Mostrar Fecha Guardada</ion-button>
 <ion-button expand="block" (click)="deleteDate()" color="danger">Eliminar Fecha Guardada</ion-button>
 <ion-button class="botONE" [routerLink]="['/analisis']">Volver atrás</ion-button>
 
+<div *ngIf="mostrarFechaGuardada">
+  <ion-item style="padding-top: 20px;">
+    <ion-card>
+      <ion-card-header>
+        Fecha Guardada
+      </ion-card-header>
+      <ion-card-content>
+        La fecha guardada es: {{ savedDate | date: 'fullDate' }}
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</div>
 
 <div *ngIf="mostrarMensajefecha">
   <ion-item style="padding-top: 20px;">

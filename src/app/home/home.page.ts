@@ -79,7 +79,7 @@ export class HomePage implements OnInit {
 
   async guardarUbicacionSeleccionada(ubicacion: { lat: number, lng: number }) {
     this.a.ubicacion = ubicacion; // Guarda la ubicación en a.ubicacion
-    await this.storageService.saveSelectedLocation(JSON.stringify(ubicacion)); // Guarda la ubicación como string en el almacenamiento
+    await this.storageService.saveSelectedLocation(JSON.stringify(ubicacion)); 
   }
 
   async obtenerUbicacionSeleccionada(): Promise<{ lat: number, lng: number } | null> {
@@ -91,7 +91,7 @@ export class HomePage implements OnInit {
   }
 
   async eliminarUbicacionSeleccionada() {
-    this.a.ubicacion = null; // Borra la ubicación de a.ubicacion
-    await this.storageService.deleteSelectedLocation(); // Elimina la ubicación del almacenamiento
+    this.a.ubicacion = null; 
+    await this.storageService.deleteSelectedLocation(); 
   }
 }
