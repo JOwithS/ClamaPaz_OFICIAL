@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>API Rest</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let item of financialData">
+      <ion-card-header>
+        <ion-card-title>{{ item.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Código: </strong> {{ item.codigo }}</p>
+        <p><strong>Unidad de Medida: </strong> {{ item.unidad_medida }}</p>
+        <p><strong>Fecha: </strong> {{ item.fecha | date: 'short' }}</p>
+        <p><strong>Valor: </strong> {{ item.valor | number: '1.2-2' }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-button (click)="goToHomePage()">Vamos al Home</ion-button>
+</ion-content>

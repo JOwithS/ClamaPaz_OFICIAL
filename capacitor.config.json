@@ -1,0 +1,16 @@
+
+
+{
+  "appId": "com.clamapaz.app",
+  "appName": "ClamaPaz-SUM2",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "Camera": {
+      "android": {
+        "saveToGallery": true,
+        "correctOrientation": true
+      }
+    }
+  }
+}
