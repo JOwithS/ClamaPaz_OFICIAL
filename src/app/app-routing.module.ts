@@ -44,7 +44,8 @@ const routes: Routes = [
   },
   {
     path: 'apirest',
-    loadChildren: () => import('./apirest/apirest.module').then(m => m.ApirestPageModule)
+    loadChildren: () => import('./apirest/apirest.module').then(m => m.ApirestPageModule),
+    canActivate:  [authGuard]
   },
   {
     path: 'page-not-found',
